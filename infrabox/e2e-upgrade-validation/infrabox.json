@@ -1,0 +1,16 @@
+{
+  "name": "BASE_NAME_TO_REPLACE-to-TARGET_NAME_TO_REPLACE-DEPLOY_TYPE_TO_REPLACE",
+  "environment": {
+    "VORA_KUBE_PREFIX_URL": "https://int.repositories.cloud.sap/artifactory/build-milestones/com/sap/datahub/SAPDataHub/",
+    "VORA_VERSION": "TARGET_VERSION_TO_REPLACE",
+    "GERRIT_CHANGE_BRANCH": "RELEASEPACK_BRANCH_TO_REPLACE",
+    "BASE_BDH_VERSIONS": "BASE_VERSION_TO_REPLACE",
+    "PACKAGE_PATTERN": "Foundation",
+    "GERRIT_CHANGE_PROJECT": "hanalite-releasepack",
+    "DEPLOY_TYPE": "DEPLOY_TYPE_TO_REPLACE"
+  },
+  "infrabox_file": "hera/bdh_upgrade_milestone_test.json",
+  "clone_url": "https://github.wdf.sap.corp/bdh/bdh-infra-tools.git",
+  "commit": "CHECKOUT_BRANCH_TO_REPLACE",
+  "type": "git"
+}

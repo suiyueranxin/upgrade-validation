@@ -1,0 +1,7 @@
+inconclusive:
+  - "^/$"
+  - "^/healthcheck$"
+  - "^/v[0-9]+/version$"
+  - "^/auth/[^/]*$"
+  - "^/types/$"
+  - "^/operators/$"

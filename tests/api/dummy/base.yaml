@@ -1,0 +1,150 @@
+paths:
+  /api/v1/op1:
+    summary: Test parameters changes
+    get:
+      parameters:
+      - name: par1
+        type: string
+      - name: par2
+        schema:
+          $ref: '#/definitions/Foo1'
+      - name: par3
+      - name: par4
+      - name: par5
+        in: path
+      - $ref: '#/parameters/par1'
+  /api/v1/op2:
+    get:
+      summary: Test response type changes
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bar1'
+        201:
+          $ref: '#/responses/res1'
+        202:
+          $ref: '#/responses/res1'
+  /api/v1/op3:
+    get:
+      summary: Test operation removal
+  /api/v1/op4:
+    put:
+      summary: Test deprecated operation removal
+      deprecated: true
+  /api/v1/op5:
+    put:
+      summary: Test removal field in deprecation
+  /api/v1/op6:
+    post:
+      summary: Test request body type changes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/definitions/Foo1'
+  /api/v1/op7:
+    post:
+      summary: Test changing request body from optional to required
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/definitions/Foo4'
+  /api/v2/op8:
+    post:
+      summary: Dummy operation to reference parameters and definitions
+      parameters:
+      - $ref: '#/parameters/par1'
+      - $ref: '#/parameters/par2'
+      - name: foo2
+        schema:
+          $ref: '#/definitions/Foo2'
+      - name: foo3
+        schema:
+          $ref: '#/definitions/Foo3'
+      - name: foo5
+        schema:
+          $ref: '#/definitions/Foo5'
+      - name: ref1
+        schema:
+          $ref: '#/definitions/Ref1'
+      - name: ref6
+        schema:
+          $ref: '#/definitions/Ref6'
+definitions:
+  Foo1:
+    description: Test property type change
+    properties:
+      name:
+        type: string
+  Foo2:
+    description: Test property type change in array
+    properties:
+      entries:
+        type: array
+        items:
+          $ref: '#/definitions/Foo1'
+  Foo3:
+    description: Test changing property from optional to required
+    properties:
+      id:
+        type: string
+  Foo4:
+    description: Test property removal
+    properties:
+      id:
+        type: string
+  Ref1:
+    properties:
+      ref2:
+        $ref: '#/definitions/Ref2'
+  Ref2:
+    properties:
+      ref3:
+        $ref: '#/definitions/Ref3'
+  Ref3:
+    properties:
+      id:
+        type: string
+  Ref4:
+    properties:
+      id:
+        type: string
+  Ref5:
+    properties:
+      ref4:
+        $ref: '#/definitions/Ref4'
+  Ref6:
+    properties:
+      ref5:
+        $ref: '#/definitions/Ref5'
+parameters:
+  par1:
+    description: Test parameter type change
+    name: par1
+    type: string
+  par2:
+    description: Test parameter removal
+    name: par2
+  unused1:
+    description: Test unused parameter removal (allowed)
+    name: unused1
+responses:
+  res1:
+    description: Test response type change
+    schema:
+      $ref: '#/definitions/Foo1'
+components:
+  schemas:
+    Bar1:
+      description: Test property type change
+      properties:
+        name:
+          type: string
+    Unused1:
+      description: Test property changes in unused objects (allowed)
+      properties:
+        name:
+          type: string

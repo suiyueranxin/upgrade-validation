@@ -1,0 +1,4 @@
+[submodule "bdh-infra-tools"]
+	path = bdh-infra-tools
+	url = git@github.wdf.sap.corp:bdh/bdh-infra-tools.git
+	branch = main

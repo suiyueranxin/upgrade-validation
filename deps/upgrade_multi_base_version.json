@@ -1,0 +1,15 @@
+{
+    "BASE_BDH_VERSION": [
+		{
+			"comment": "Last DI Cloud version",
+			"di-validation": "yes",
+			"version": "2209.14.29"
+		} 
+	],
+    "BASE_DIS_VERSION": [
+        {
+            "comment": "Last DI Embedded version; See https://github.wdf.sap.corp/bdh/dis-release/blob/master/dis-versions.yaml",
+            "version": "2109.33.11-dis.0" 
+        }
+    ]
+}

@@ -1,0 +1,233 @@
+{
+	"repositories": [
+		{
+			"name": "velocity/vsystem",
+			"title": "Core Services",
+			"checkSwagger": true,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"open-api/agent.yaml",
+				"open-api/async-status.yaml",
+				"open-api/configurations.yaml",
+				"open-api/event.yaml",
+				"open-api/feature-flag.yaml",
+				"open-api/idp.yaml",
+				"open-api/login.yaml",
+				"open-api/login-v2.yaml",
+				"open-api/login-public.yaml",
+				"open-api/metrics.yaml",
+				"open-api/policy.yaml",
+				"open-api/resource-quota.yaml",
+				"open-api/runlevel.yaml",
+				"open-api/scheduler.yaml",
+				"open-api/secret.yaml",
+				"open-api/solution-repository.yaml",
+				"open-api/tenant-v3.yaml",
+				"open-api/token.yaml",
+				"open-api/user-v2.yaml",
+				"open-api/version.yaml",
+				"open-api/vrep-layers.yaml",
+				"open-api/vrep-public-api.yaml",
+				"open-api/vrep-private-api.yaml",
+				"open-api/workloads-v2.yaml"
+			]
+		},
+		{
+			"name": "velocity/vflow",
+			"title": "Core Services",
+			"checkSwagger": true,
+			"checkOperators": true,
+			"swaggerFiles": [
+				"src/stdlib/swagger.yaml",
+				"src/stdlib/swagger/swagger-v2.yaml"
+			]
+		},
+		{
+			"name": "bdh/datahub-app-base",
+			"title": "Core Services",
+			"checkSwagger": true,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"src/apps/dh-app-connection/spec/swagger.yaml",
+				"src/apps/dh-app-database/spec/swagger.yaml",
+				"src/apps/dh-app-dex/spec/swagger.yaml",
+				"src/apps/dh-app-logging/spec/swagger.yaml",
+				"src/apps/dh-app-scheduler/spec/swagger.yaml",
+				"src/apps/dh-app-task/spec/swagger.yaml"
+			]
+		},
+		{
+			"name": "orca/connection-service",
+			"title": "Core Services",
+			"checkSwagger": true,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"apps/ccm/swagger-spec.yaml"
+			]
+		},
+		{
+			"name": "bigdataservices/storagegateway",
+			"title": "Core Services",
+			"checkSwagger": true,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"doc/api-spec/storagegateway-swagger.yaml"
+			]
+		},
+		{
+			"name": "bdh/diagnostics",
+			"title": "Core Services",
+			"checkSwagger": false,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"/src/open-api/monitoring-query.yaml"
+			]
+		},
+		{
+			"name": "velocity/axino",
+			"title": "Integration Technologies",
+			"checkSwagger": true,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"docs/api/spec.yaml"
+			]
+		},
+		{
+			"name": "bdh/federation",
+			"title": "Integration Technologies",
+			"checkSwagger": true,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"docs/api/spec.yaml"
+			]
+		},
+		{
+			"name": "bdh/rms",
+			"title": "Integration Technologies",
+			"checkSwagger": true,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"docs/api/dt/spec.yaml",
+				"docs/api/rt/spec.yaml"
+			]
+		},
+		{
+			"name": "bdh/datahub-dq-integration",
+			"title": "Flowagent DQ operator integration",
+			"checkSwagger": false,
+			"checkOperators": true,
+			"swaggerFiles": []
+		},
+		{
+			"name": "bdh/datahub-flowagent",
+			"title": "Integration Technologies",
+			"checkSwagger": true,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"source/service-api/spec/swagger.yaml"
+			]
+		},
+		{
+			"name": "velocity/vflow-sub-abap",
+			"title": "Data Management",
+			"checkSwagger": true,
+			"checkOperators": true,
+			"swaggerFiles": []
+		},
+		{
+			"name": "bdh/datahub-app-data",
+			"title": "Metadata Management & Data Quality",
+			"checkSwagger": true,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"src/apps/dh-app-metadata/spec/browsingAndSearch.yaml",
+				"src/apps/dh-app-metadata/spec/capabilities.yaml",
+				"src/apps/dh-app-metadata/spec/connection.yaml",
+				"src/apps/dh-app-metadata/spec/dataset.yaml",
+				"src/apps/dh-app-metadata/spec/extraction.yaml",
+				"src/apps/dh-app-metadata/spec/factsheet.yaml",
+				"src/apps/dh-app-metadata/spec/favorites.yaml",
+				"src/apps/dh-app-metadata/spec/glossary.yaml",
+				"src/apps/dh-app-metadata/spec/lineage.yaml",
+				"src/apps/dh-app-metadata/spec/loading.yaml",
+				"src/apps/dh-app-metadata/spec/monitor.yaml",
+				"src/apps/dh-app-metadata/spec/overview.yaml",
+				"src/apps/dh-app-metadata/spec/policy.yaml",
+				"src/apps/dh-app-metadata/spec/preparation.yaml",
+				"src/apps/dh-app-metadata/spec/publicBrowsing.yaml",
+				"src/apps/dh-app-metadata/spec/publicConnection.yaml",
+				"src/apps/dh-app-metadata/spec/publicDataset.yaml",
+				"src/apps/dh-app-metadata/spec/publicTagging.yaml",
+				"src/apps/dh-app-metadata/spec/publication.yaml",
+				"src/apps/dh-app-metadata/spec/rules.yaml",
+				"src/apps/dh-app-metadata/spec/scheduler.yaml",
+				"src/apps/dh-app-metadata/spec/settings.yaml",
+				"src/apps/dh-app-metadata/spec/social.yaml",
+				"src/apps/dh-app-metadata/spec/swagger.yaml",
+				"src/apps/dh-app-metadata/spec/tagging.yaml",
+				"src/apps/dh-app-metadata/spec/validation.yaml",
+				"src/apps/dh-app-preparation/spec/action.yaml",
+				"src/apps/dh-app-preparation/spec/connection.yaml",
+				"src/apps/dh-app-preparation/spec/dataSample.yaml",
+				"src/apps/dh-app-preparation/spec/dataSet.yaml",
+				"src/apps/dh-app-preparation/spec/execution.yaml",
+				"src/apps/dh-app-preparation/spec/lineage.yaml",
+				"src/apps/dh-app-preparation/spec/preparation.yaml",
+				"src/apps/dh-app-preparation/spec/swagger.yaml"
+			],
+			"baseVersions": [
+				"rel/2103.29.5"
+			]
+		},
+		{
+			"name": "dsp/ml-api",
+			"title": "Machine Learning",
+			"checkSwagger": false,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"src/api/openapi.yaml"
+			]
+		},
+		{
+			"name": "dsp/ml-dm-api",
+			"title": "Machine Learning",
+			"checkSwagger": false,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"src/api/swagger.yaml"
+			]
+		},
+		{
+			"name": "dsp/ml-tracking",
+			"title": "Machine Learning",
+			"checkSwagger": false,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"src/swagger/main-v2.yaml"
+			]
+		},
+		{
+			"name": "dsp/dsp-gitserver",
+			"title": "Machine Learning",
+			"checkSwagger": false,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"api/git-server.yaml"
+			],
+			"exceptions": [],
+			"baseVersions": [
+				"rel/1.4.31"
+			]
+		},
+		{
+			"name": "bdh/dis-infrastructure",
+			"title": "Cloud Service Infrastructure",
+			"checkSwagger": false,
+			"checkOperators": false,
+			"swaggerFiles": [
+				"pkg/monitor/server/open-api/swagger.yaml",
+				"https://monitor.datahub.only.sap/apispec_1.json"
+			]
+		}
+	]
+}

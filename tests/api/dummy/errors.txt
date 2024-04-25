@@ -1,0 +1,24 @@
+formerly optional parameter changed to required: dummy/paths/api/v1/op1/get/parameters/par3
+formerly optional parameter changed to required: dummy/paths/api/v1/op7/post/requestBody
+missing deprecation field 'x-removal-version': dummy/paths/api/v1/op5/put
+new parameter must be optional: dummy/paths/api/v1/op1/get/parameters/newpar
+new parameter must be optional: dummy/definitions/Foo3/name
+new path must be versioned: dummy/paths/api/newop
+operation removed without prior deprecation: dummy/paths/api/v1/op3
+parameter removed without prior deprecation: dummy/paths/api/v1/op1/get/parameters/par4
+parameter removed without prior deprecation: dummy/parameters/par2
+parameter changed from 'path' to 'query': dummy/paths/api/v1/op1/get/parameters/par5
+property removed without prior deprecation: dummy/definitions/Foo4/properties/id
+type changed from 'string' to 'int': dummy/paths/api/v1/op1/get/parameters/par1/type
+type changed from 'string' to 'int': dummy/definitions/Foo1/properties/name/type
+type changed from 'string' to 'int': dummy/definitions/Ref3/properties/id/type
+type changed from 'string' to 'int': dummy/definitions/Ref4/properties/id/type
+type changed from 'string' to 'int': dummy/parameters/par1/type
+type changed from 'string' to 'int': dummy/components/schemas/Bar1/properties/name/type
+type changed from '#/definitions/Foo1' to '#/definitions/Foo2': dummy/paths/api/v1/op1/get/parameters/par2/schema/$ref
+type changed from '#/definitions/Foo1' to '#/definitions/Foo2': dummy/paths/api/v1/op6/post/requestBody/content/application/json/schema/$ref
+type changed from '#/definitions/Foo1' to '#/definitions/Foo2': dummy/definitions/Foo2/properties/entries/items/$ref
+type changed from '#/definitions/Foo1' to '#/definitions/Foo2': dummy/responses/res1/schema/$ref
+type changed from '#/parameters/par1' to '#/parameters/par2': dummy/paths/api/v1/op1/get/parameters/1/$ref
+type changed from '#/responses/res1' to '#/responses/res2': dummy/paths/api/v1/op2/get/responses/201/$ref
+type changed from '#/components/schemas/Bar1' to '#/components/schemas/Bar2': dummy/paths/api/v1/op2/get/responses/200/content/application/json/schema/$ref

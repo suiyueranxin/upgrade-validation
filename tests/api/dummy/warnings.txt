@@ -1,0 +1,3 @@
+deprecated operation removed: dummy/paths/api/v1/op4
+private/unused parameter removed: dummy/parameters/unused1
+type changed from 'string' to 'int': dummy/components/schemas/Unused1/properties/name/type

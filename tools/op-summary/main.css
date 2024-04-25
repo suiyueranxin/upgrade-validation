@@ -1,0 +1,63 @@
+body {
+  margin: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 80%;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+a:active {
+  color: black;
+  text-decoration: underline;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+}
+h2.section {
+  background-color: lightgray;
+}
+.added-file { color:green; }
+.added-entry { color:green; }
+.added-operation { color:green; }
+.added-parameter { color:green; }
+.added-property { color:green; }
+.added-method { color:green; }
+.removed-file { color:red; }
+.removed-entry { color:red; }
+.removed-operation { color:red; }
+.removed-parameter { color:red; }
+.removed-response { color:orange; }
+.removed-property { color:red; }
+.removed-method { color:red; }
+.removed-spec { color:red; }
+.removed-deprecated { color:orange; }
+.removed-private { color:orange; }
+.changed-entry { color:orange; }
+.changed-type { color:orange; }
+.refined-type { color:orange; }
+.deprecated { color:blue; }
+.skipped-private { color:grey; }
+.changed-spec { color:orange; }
+.unchanged-spec { color:grey; }
+.private { color:green; }
+.public { color:orange; }
+.customer { color:red; }
+.state_deprecated { background-color: #FAA; }
+.state_active { background-color: #FFF; }
+.state_beta { background-color: #AAF; }

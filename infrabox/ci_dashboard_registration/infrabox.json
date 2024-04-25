@@ -1,0 +1,21 @@
+{
+    "name": "ci_dashboard_registration_BASE_NAME_TO_REPLACE-to-TARGET_NAME_TO_REPLACE-DEPLOY_TYPE_TO_REPLACE",
+    "type": "docker",
+    "docker_file": "infrabox/ci_dashboard_registration/Dockerfile",
+    "build_context": "../..",
+    "build_only": false,
+    "environment": {
+        "DEPLOY_TYPE": "DEPLOY_TYPE_TO_REPLACE",
+        "GIT_ROOT": "/infrabox/context/",
+        "VALIDATION_TYPE": "upgrade_validation",
+         "CI_DASHBOARD_URL": "https://ci-dashboard.datahub.only.sap/api/pipelines/releasepack/job"
+    },
+    "timeout": 2400,
+    "resources": {
+        "limits": {
+            "cpu": 1,
+            "memory": 1024
+        }
+    }
+}
+

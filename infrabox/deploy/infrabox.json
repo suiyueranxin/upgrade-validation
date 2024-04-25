@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "name": "build-and-deploy-upgrade-validation-image",
+      "type": "docker",
+      "docker_file": "infrabox/upgrade-validation/Dockerfile",
+      "build_context": "../..",
+      "build_only": true,
+      "resources": { "limits": { "cpu": 1, "memory": 1024 } },
+      "deployments": [
+        {
+          "type": "docker-registry",
+          "host": "docker.wdf.sap.corp:51055",
+          "repository": "com.sap.datahub.linuxx86_64/upgrade-validation",
+          "username": "vora_docker",
+          "password": { "$secret": "DOCKER_WDF_REGISTRY_PASSWORD" },
+          "tag": "VERSION_TO_REPLACE"
+        }
+      ]
+    }
+  ]
+}

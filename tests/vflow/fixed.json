@@ -1,0 +1,1219 @@
+{"fixes":[
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.vora.voraLoader",
+        "key":"storage",
+        "subkey":"enum",
+        "version":"2.8.1",
+        "reason":"Three new storage backends (OSS, SDL, ADL_v2) were added. 'local' was removed, but it does not make sense in a container/pod."
+    },
+    {
+        "kind":"pkey-del",
+        "operator":"com.sap.openapi.client",
+        "key":"basePath",
+        "subkey":"sap_vflow_constraints",
+        "version":"3.0.4",
+        "reason":"not used"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.dh.connections.openapi",
+        "key":"basePath",
+        "version":"2.7.33",
+        "reason":"not used"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.dh.connections.openapi",
+        "key":"httpHeaders",
+        "version":"2.7.33",
+        "reason":"Property was never actually used."
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.dh.connections.openapi",
+        "key":"port",
+        "version":"2.7.33",
+        "reason":"Property was never actually used."
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.connections.abap",
+        "key":"user",
+        "subkey":"pattern",
+        "version":"2.7.33",
+        "reason":"Length of user name increased from 12 to 40."
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.kafka.producer",
+        "key":"tlsCAFile",
+        "subkey":"sap_vflow_constraints",
+        "version":"3.1.20",
+        "reason":"Type changed from `[true]` to `true`, which is practically a type extension (from [true] to [true,false])."
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"tlsCAFile",
+        "subkey":"sap_vflow_constraints",
+        "version":"3.1.20",
+        "reason":"Type changed from `[true]` to `true`, which is practically a type extension (from [true] to [true,false])."
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.database.table.replicator",
+        "key":"deltaProperties",
+        "subkey":"properties",
+        "version":"2007.0.9",
+        "reason":"added properties related to capturing pkeys/values on change"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.abap.odp.consumer",
+        "key":"abapConnection",
+        "subkey":"properties",
+        "version":"2007.0.9",
+        "reason":"change help URL to use ABAP_LEGACY text"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.abap.odp.consumer",
+        "key":"abapConnection",
+        "subkey":"properties",
+        "version":"2.7.87",
+        "reason":"change help URL to use ABAP_LEGACY text"
+    },
+    {
+        "kind":"pkey-del",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.storage.producer",
+        "key":"format",
+        "subkey":"sap_vflow_constraints",
+        "version":"2.7.87",
+        "reason":"deleted ui_visibility config",
+        "gitref":"b279ac784d7f057926d53a02a23f09f9ca8f5e35"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.storage.producer",
+        "key":"targetObjectName",
+        "version":"2.7.87",
+        "reason":"property deprecated (via docs) for several versions",
+        "gitref":"1234267c1150a229d457d00d3ad3d6dcd35822bd"
+    },
+    {
+        "kind":"pkey-del",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.storage.producer",
+        "key":"additionalProperties_common",
+        "subkey":"sap_vflow_constraints",
+        "version":"2.7.87",
+        "reason":"deleted ui_visibility config",
+        "gitref":"b279ac784d7f057926d53a02a23f09f9ca8f5e35"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.storage.producer",
+        "key":"mode",
+        "subkey":"sap_vflow_constraints",
+        "version":"2.7.87",
+        "reason":"deleted ui_visibility config"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.storage.producer",
+        "key":"sdlConnection",
+        "subkey":"properties",
+        "version":"2.7.87",
+        "reason":"options could not be set by user anyway?",
+        "gitref":"4076aa4b972834413239c4dccd7c9eb228af9059"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.storage.producer",
+        "key":"service",
+        "subkey":"enum",
+        "version":"2.7.87",
+        "reason":"added adl_v2 as storage type option",
+        "gitref":"4076aa4b972834413239c4dccd7c9eb228af9059"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.storage.consumer",
+        "key":"sdlConnection",
+        "subkey":"properties",
+        "version":"2.7.87",
+        "reason":"options could not be set by user anyway?",
+        "gitref":"4076aa4b972834413239c4dccd7c9eb228af9059"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.storage.consumer",
+        "key":"service",
+        "subkey":"enum",
+        "version":"2.7.87",
+        "reason":"added adl_v2 to storage type enum",
+        "gitref":"4076aa4b972834413239c4dccd7c9eb228af9059"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.sql.executor",
+        "key":"service",
+        "subkey":"enum",
+        "version":"2.7.87",
+        "reason":"added Redshift to database service enum",
+        "gitref":"5df308fb8ed0f24dce4de0beba189dedb9328622"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.cdc.graphGenerator",
+        "key":"source",
+        "subkey":"enum",
+        "version":"2.7.87",
+        "reason":"added azure_sql_db to source enum",
+        "gitref":"931f6ef7b5951c2dea46bdca19fe13537bca1a5d"
+    },
+    {
+        "kind":"port-del",
+        "operator":"com.sap.dh.cdc.graphGenerator",
+        "key":"outTriggerGraph",
+        "version":"2.7.87",
+        "reason":"operator is already deprecated",
+        "gitref":"931f6ef7b5951c2dea46bdca19fe13537bca1a5d"
+    },
+    {
+        "kind":"port-chg",
+        "operator":"com.sap.dh.cdc.graphGenerator",
+        "key":"outTriggerGraph",
+        "version":"2.7.87",
+        "reason":"operator is already deprecated",
+        "gitref":"931f6ef7b5951c2dea46bdca19fe13537bca1a5d"
+    },
+    {
+        "kind":"port-chg",
+        "operator":"com.sap.dh.cdc.graphGenerator",
+        "key":"outInitialLoadGraph",
+        "version":"2.7.87",
+        "reason":"operator is already deprecated",
+        "gitref":"931f6ef7b5951c2dea46bdca19fe13537bca1a5d"
+    },
+    {
+        "kind":"port-chg",
+        "operator":"com.sap.dh.cdc.graphGenerator",
+        "key":"outDeltaGraph",
+        "version":"2.7.87",
+        "reason":"operator is already deprecated",
+        "gitref":"931f6ef7b5951c2dea46bdca19fe13537bca1a5d"
+    },
+
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.oracle.table.consumer",
+        "key":"table_name",
+        "version":"2.7.87",
+        "reason":"property deprecated (via docs) for several versions",
+        "gitref":"1234267c1150a229d457d00d3ad3d6dcd35822bd"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.flowagent.operators.com.sap.dh.ds.sapiq.table.consumer",
+        "key":"adapted_dataset",
+        "subkey":"type",
+        "version":"2.7.87",
+        "reason":"changed type from _string_ to _object_",
+        "gitref":"f0941c09db857f36afb4f655d17cedffb7dbe4d9"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.dh.dq.dqmmClient",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2009.2.0",
+        "reason":"changed URL of documentation",
+        "gitref":"494545c0a74878ec55e9b67745875b6db3883642"
+    },
+    {
+        "kind":"op-del",
+        "operator":"com.sap.bdh.flowgraphCompiler",
+        "key":"connection",
+        "version":"2010.9.1",
+        "reason":"Never documented, absolutely unlikely that customers built graphs using this.",
+        "gitref":"d0367fbb115a59f603210e874b033b39259755e2"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2Flow",
+        "subkey":"enum",
+        "version":"2101.3.0",
+        "reason":"remove OAuth2 implicit flow",
+        "gitref":"2f75c07113a8c3b639ccc95d5ae1155e0e29135d"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2AuthUrl",
+        "subkey":"sap_vflow_constraints",
+        "version":"2101.3.0",
+        "reason":"remove OAuth2 implicit flow",
+        "gitref":"2f75c07113a8c3b639ccc95d5ae1155e0e29135d"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.http.client2",
+        "key":"postConnection",
+        "subkey":"properties",
+        "version":"2104.6.0",
+        "reason":"added (sub-)property to set content type",
+        "gitref":"1ab1340f25853ff320b07bcd1ad6407ddd4ce050"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.readTable.v2",
+        "key":"decimalOutputFormat",
+        "subkey":"enum",
+        "version":"3.2",
+        "reason":"changed enum from Fraction(string) to Fraction",
+        "gitref":"d8ae7581fe7498a616bd79e0fa59c3e485802bee"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.file.write.v2",
+        "key":"connection",
+        "subkey":"$ref",
+        "version":"2110.3.0",
+        "reason":"incompatible change on unpublished operator",
+        "gitref":"f66615e82c10e5590055c3ff6e33e44333ab1eaa"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2.v2",
+        "key":"maxMessageBytes",
+        "version":"2110.3.0",
+        "reason":"incompatible change on unpublished operator",
+        "gitref":"4c39c890abb95b1d8281defb94c2c0691a2e98c1"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2.v2",
+        "key":"terminateOnError",
+        "version":"2110.3.0",
+        "reason":"incompatible change on unpublished operator",
+        "gitref":"4c39c890abb95b1d8281defb94c2c0691a2e98c1"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.readTable.v2",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.3.0",
+        "reason":"some properties were deleted.But operator is not published",
+        "gitref":"14c97cdd4adaa27b82a85016bf0e3e1ca7cf8fd5"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.initTable.v2",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.3.0",
+        "reason":"some properties were deleted.But operator is not published",
+        "gitref":"14c97cdd4adaa27b82a85016bf0e3e1ca7cf8fd5"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.writeTable.v2",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.3.0",
+        "reason":"some properties were deleted.But operator is not published",
+        "gitref":"14c97cdd4adaa27b82a85016bf0e3e1ca7cf8fd5"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.copy2",
+        "key":"wasbConnection",
+        "subkey":"enum",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.client2",
+        "key":"connection",
+        "subkey":"enum",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.initTable",
+        "key":"connection",
+        "subkey":"enum",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.copy2",
+        "key":"ossConnection",
+        "subkey":"enum",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"realmGSSAPI",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"tlsCAFile",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"username",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"brokers",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"keytabPath",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"insecureSkipVerify",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"useCA",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"authenticate",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"useTLS",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"kerberosConfigPath",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"saslAuthentication",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"groupId",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"authTypeGSSAPI",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"tlsClientCertFile",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"password",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"serviceNameGSSAPI",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"tlsClientKeyfile",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2ClientSecret",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"tlsCa",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2Flow",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"apiKeyName",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"schemes",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2DefaultTokenExpires",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"tlsCertificate",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"apiKeyType",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2AdditionalHeaders",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"apiKeyValue",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"password",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"authScheme",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2ClientId",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2TokenUrl",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2Scope",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2AuthUrl",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"oauth2Resource",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"tlsRenegotiation",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"tlsSkipVerify",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"tlsKey",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"host",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"useTLS",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"password",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"keytabPath",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"tlsClientCertFile",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"realmGSSAPI",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"authenticate",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"authTypeGSSAPI",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"serviceNameGSSAPI",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"username",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"saslAuthentication",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"kerberosConfigPath",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"insecureSkipVerify",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"tlsClientKeyFile",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"useCA",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"tlsCAFile",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.producer",
+        "key":"brokers",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"tlsClientKeyFile",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"prop-del",
+        "operator":"com.sap.openapi.client",
+        "key":"user",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.read",
+        "key":"ossConnection",
+        "subkey":"enum",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.kafka.producer",
+        "key":"connectionType",
+        "subkey":"enum",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.kafka.consumer2",
+        "key":"connectionType",
+        "subkey":"enum",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.readTable",
+        "key":"connection",
+        "subkey":"enum",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.remove2",
+        "key":"ossConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.remove2",
+        "key":"wasbConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.remove2",
+        "key":"awsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.remove2",
+        "key":"webhdfsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.remove2",
+        "key":"adlConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.remove2",
+        "key":"hadoopConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.remove2",
+        "key":"gcsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.write",
+        "key":"ossConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.write",
+        "key":"wasbConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.write",
+        "key":"awsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.write",
+        "key":"webhdfsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.write",
+        "key":"adlConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.write",
+        "key":"hadoopConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.write",
+        "key":"gcsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.read",
+        "key":"ossConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.read",
+        "key":"wasbConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.read",
+        "key":"awsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.read",
+        "key":"webhdfsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.read",
+        "key":"adlConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.read",
+        "key":"hadoopConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.read",
+        "key":"gcsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.move2",
+        "key":"ossConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.move2",
+        "key":"wasbConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.move2",
+        "key":"awsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.move2",
+        "key":"webhdfsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.move2",
+        "key":"adlConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.move2",
+        "key":"hadoopConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.move2",
+        "key":"gcsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.copy2",
+        "key":"ossConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.copy2",
+        "key":"wasbConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.copy2",
+        "key":"awsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.copy2",
+        "key":"webhdfsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.copy2",
+        "key":"adlConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.copy2",
+        "key":"hadoopConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.storage.copy2",
+        "key":"gcsConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.cloud.example",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.monitor2",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.cloud.cpi.pi",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.email.send",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.email.receive",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.client2",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.runSQL",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.readTable",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.writeTable",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.initTable",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hadoop.submitJob",
+        "key":"dataprocConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.cloud.gcp.pubsub.producer",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.cloud.gcp.pubsub.consumer",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.cloud.aws.sns.consumer",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.cloud.aws.sns.producer",
+        "key":"connection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.http.client2",
+        "key":"getConnection",
+        "subkey":"properties",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.openapi.client",
+        "key":"connectionType",
+        "subkey":"enum",
+        "version":"2110.8.0",
+        "reason":"DM00-3044 Remove Manual Connections in Modeler (UI only)"
+    },
+    {
+        "kind":"pkey-chg",
+        "operator":"com.sap.hana.readTable.v2",
+        "key":"sap_vflow_uicontrol",
+        "subkey":"dataTypeOptions",
+        "version":"2112.2.0",
+        "reason":"internal UI configs for the operator (will be released  with 2110/3.2)",
+        "gitref":"6c8cb8f6e61281e6400f827983695f7e8a91b548"
+    },
+    {
+        "kind":"op-del",
+        "operator":"com.sap.cloud.example",
+        "key":"<placeholder>",
+        "version":"2110.5.2",
+        "reason":"Removed example operator.",
+        "gitref":"6c8cb8f6e61281e6400f827983695f7e8a91b548"
+    }
+]}

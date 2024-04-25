@@ -1,0 +1,86 @@
+{
+	"solutions": [
+		{
+			"repository": "velocity/vflow",
+			"artifact": "vsolution_vflow_foundation",
+		        "group": "com.sap.hana.hl.linuxx86_64",
+                        "operator-dirs": ["src/stdlib", "content/files/vflow", "source/vsystem/vsolution/vrep/vflow"],
+                        "check_operators": true,
+                        "generate_docs": true
+		},
+		{
+			"repository": "velocity/vflow-sub-abap",
+			"artifact": "vsolution_vflow_sub_abap",
+    		        "group": "com.sap.dh",
+                        "operator-dirs": ["vsolution/content/files/vflow", "content/files/vflow"],
+                        "check_operators": true,
+                        "generate_docs": true
+		},
+		{
+			"repository": "bdh/datahub-flowagent",
+			"artifact": "flowagent-vsolution",
+		        "group": "com.sap.dh.flowagent",
+                        "operator-blacklist": ["com.sap.dh.dq."],
+                        "settings-path": "../../../di-vsolution/flowagent.settings.json",
+                        "operator-dirs": ["source/vsystem/vsolution/vrep/vflow", "content/files/vflow"],
+                        "check_operators": true,
+                        "generate_docs": true
+                },
+                {
+                        "repository": "bdh/datahub-dq-integration",
+                        "artifact": "vsolution-dh-dq-integration",
+                        "group": "com.sap.dh.dq-integration",
+                        "operator-dirs": ["vsolution/dq-integration/content/files/vflow", "content/files/vflow"],
+                        "check_operators": true,
+                        "generate_docs": true
+		},
+		{
+			"repository": "bdh/datahub-app-data",
+                        "operator-dirs": ["src/vrep/vflow"],
+                        "check_operators": false,
+                        "generate_docs": true
+		},
+		{
+			"repository": "velocity/vflow-sub-node",
+                        "operator-dirs": ["packages/subengine/src"],
+                        "check_operators": false,
+                        "generate_docs": true
+		},
+		{
+			"repository": "velocity/vflow-sub-go",
+                        "operator-dirs": ["src"],
+                        "check_operators": false,
+                        "generate_docs": true
+		},
+		{
+			"repository": "velocity/axino",
+                        "operator-dirs": ["vsolution/content/files/axino/ape"],
+                        "check_operators": false,
+                        "generate_docs": true
+		},
+		{
+			"repository": "dsp/dsp-core-operators",
+                        "operator-dirs": ["vsolution/dsp-core-operators/content/files/vflow"],
+                        "check_operators": false,
+                        "generate_docs": true
+		},
+		{
+			"repository": "dsp/dsp-content",
+                        "operator-dirs": ["src/vsolution_vflow_ml/content/files/vflow"],
+                        "check_operators": false,
+                        "generate_docs": true
+		},
+		{
+			"repository": "dsp/dsp-ml-content",
+                        "operator-dirs": ["vsolutions"],
+                        "check_operators": false,
+                        "generate_docs": true
+		},
+		{
+			"repository": "dsp/dataloader",
+                        "operator-dirs": ["vsolution"],
+                        "check_operators": false,
+                        "generate_docs": true
+		}
+	]
+}

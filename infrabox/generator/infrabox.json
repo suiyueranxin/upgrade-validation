@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "name": "build-upgrade-validation-image",
+      "type": "docker",
+      "docker_file": "infrabox/upgrade-validation/Dockerfile",
+      "build_context": "../..",
+      "build_only": true,
+      "resources": {
+        "limits": {
+          "cpu": 1,
+          "memory": 1024
+        }
+      },
+      "deployments": [
+        {
+          "type": "docker-registry",
+          "host": "v2-registry.datahub.only.sap",
+          "repository": "infrabox/upgrade/com.sap.datahub.linuxx86_64/upgrade-validation"
+        }
+      ]
+    },
+    {
+      "name": "check-api-compatibility",
+      "type": "docker-image",
+      "build_context": "../..",
+      "image": "v2-registry.datahub.only.sap/infrabox/upgrade/com.sap.datahub.linuxx86_64/upgrade-validation:build_$INFRABOX_BUILD_NUMBER",
+      "repository": {
+        "clone": true,
+        "full_history": false
+      },
+      "environment": {
+        "UPGRADE_VALIDATION_GITHUB_TOKEN": {
+          "$secret": "UPGRADE_VALIDATION_GITHUB_TOKEN"
+        }
+      },
+      "resources": {
+        "limits": {
+          "cpu": 1,
+          "memory": 1024
+        }
+      },
+      "depends_on": ["build-upgrade-validation-image"]
+    },
+    {
+      "name": "check-image-availability",
+      "type": "docker",
+      "docker_file": "infrabox/deploy/Dockerfile",
+      "build_context": "../..",
+      "build_only": false,
+      "resources": {
+        "limits": {
+          "cpu": 1,
+          "memory": 1024
+        }
+      },
+      "environment": {
+        "DOCKER_WDF_REGISTRY": "docker.wdf.sap.corp:51055",
+        "DOCKER_WDF_REPOSITORY": "com.sap.datahub.linuxx86_64/upgrade-validation",
+        "DOCKER_WDF_REGISTRY_USERNAME": "vora_docker",
+        "DOCKER_WDF_REGISTRY_PASSWORD": {
+          "$secret": "DOCKER_WDF_REGISTRY_PASSWORD"
+        },
+        "CURRENT_VERSION": "${version}"
+      },
+      "generate_if": {
+        "matches_pattern": ["deps/*"]
+      },
+      "depends_on": ["check-api-compatibility"]
+    },
+    {
+      "name": "e2e-upgrade-validation",
+      "type": "docker",
+      "docker_file": "infrabox/e2e-upgrade-validation/Dockerfile",
+      "build_context": "../..",
+      "build_only": false,
+      "environment": {
+        "UPGRADE_VALIDATION_GITHUB_TOKEN": {
+          "$secret": "UPGRADE_VALIDATION_GITHUB_TOKEN"
+        }
+      },
+      "resources": {
+        "limits": {
+          "cpu": 1,
+          "memory": 1024
+        }
+      },
+      "generate_if": {
+        "matches_pattern": ["deps/*"]
+      }
+    }
+  ]
+}
